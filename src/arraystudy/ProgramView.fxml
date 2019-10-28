@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="660.0" style="-fx-background-color: dcdcdc;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arraystudy.Controller">
+   <children>
+      <Pane id="mainPane" fx:id="mainPane" prefHeight="400.0" prefWidth="660.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b5b0e8" height="64.0" layoutX="321.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="325.0" />
+            <TextField id="valueText" fx:id="valueText" disable="true" layoutX="513.0" layoutY="188.0" prefHeight="25.0" prefWidth="134.0" />
+            <TextField id="arrayText1" fx:id="arrayText2" disable="true" layoutX="151.0" layoutY="99.0" prefHeight="25.0" prefWidth="300.0" />
+            <Rectangle fill="#1fffa6" height="390.0" layoutY="38.0" stroke="#6b6b6b" strokeType="INSIDE" strokeWidth="0.5" width="90.0" />
+            <Label layoutX="20.0" layoutY="65.0" text="Tömb 1:" textFill="#6b6b6b">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="101.0" text="Tömb 2:" textFill="#6b6b6b">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button id="rndButton1" fx:id="rndButton1" layoutX="90.0" layoutY="63.0" mnemonicParsing="false" onAction="#randomArray1" text="Random" />
+            <Button id="rndButton1" fx:id="rndButton2" disable="true" layoutX="90.0" layoutY="99.0" mnemonicParsing="false" onAction="#randomArray2" text="Random" />
+            <Label layoutX="10.0" layoutY="135.0" text="Művelet:" textFill="#6b6b6b">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox layoutX="209.0" layoutY="146.0" spacing="15.0">
+               <children>
+                  <RadioButton id="radioSelect" fx:id="radioSelect" layoutX="206.0" layoutY="161.0" mnemonicParsing="false" onAction="#radioSelectCheck" text="Kiválasztás">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="op" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="radioMin" fx:id="radioMin" layoutX="206.0" layoutY="192.0" mnemonicParsing="false" onAction="#radioMinCheck" text="Minimum" toggleGroup="$op">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="radioUnion" fx:id="radioUnion" layoutX="206.0" layoutY="223.0" mnemonicParsing="false" onAction="#radioUnionCheck" text="Unió" toggleGroup="$op">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="radioOrderDown" fx:id="radioOrderDown" layoutX="206.0" layoutY="258.0" mnemonicParsing="false" onAction="#radioOrderDownCheck" text="Rendez le" toggleGroup="$op">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <VBox id="vBox1" fx:id="vBox1" disable="true" layoutX="464.0" layoutY="63.0" spacing="5.0">
+               <children>
+                  <RadioButton id="radioFx1" fx:id="radioFx1" layoutX="465.0" layoutY="77.0" mnemonicParsing="false" onAction="#radioFx1Check" selected="true" text="(=) Egyenlő:">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="con" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton id="radioFx2" fx:id="radioFx2" layoutX="465.0" layoutY="96.0" mnemonicParsing="false" onAction="#radioFx2Check" text="(&gt;) Nagyobb mint:" toggleGroup="$con">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="radioFx3" fx:id="radioFx3" layoutX="465.0" layoutY="118.0" mnemonicParsing="false" onAction="#radioFx3Check" text="(&lt;) Kisebb mint:" toggleGroup="$con">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="radioFx4" fx:id="radioFx4" layoutX="465.0" layoutY="138.0" mnemonicParsing="false" onAction="#radioFx4Check" text="(&gt;=) Nagyobb egyenlő mint:" toggleGroup="$con">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="radioFx5" fx:id="radioFx5" layoutX="465.0" layoutY="161.0" mnemonicParsing="false" onAction="#radioFx5Check" text="(&lt;=) Kisebb egyenlő mint" toggleGroup="$con">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="radioFx6" fx:id="radioFx6" layoutX="459.0" layoutY="180.0" mnemonicParsing="false" onAction="#radioFx6Check" text="(!=) Nem egyenlő:" toggleGroup="$con">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <Label layoutX="454.0" layoutY="41.0" text="Feltétel:" textFill="#6b6b6b">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="454.0" layoutY="189.0" text="Érték:" textFill="#6b6b6b">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField id="arrayText1" fx:id="arrayText1" layoutX="151.0" layoutY="63.0" prefHeight="25.0" prefWidth="300.0" />
+            <Button id="calculateButton" fx:id="calculateButton" layoutX="91.0" layoutY="299.0" mnemonicParsing="false" onAction="#calculateButtonAction" text="Kiértékelés">
+               <font>
+                  <Font name="Consolas" size="16.0" />
+               </font>
+            </Button>
+            <Button id="eraseButton" fx:id="eraseButton" layoutX="219.0" layoutY="299.0" mnemonicParsing="false" onAction="#eraseButtonAction" text="Törlés">
+               <font>
+                  <Font name="Consolas" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="1.0" layoutY="356.0" text="Eredmény:" textFill="#6b6b6b">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField id="resultText" fx:id="resultText" layoutX="97.0" layoutY="353.0" prefHeight="27.0" prefWidth="560.0" />
+            <Line endX="550.0" layoutX="105.0" layoutY="388.0" startX="-10.0" stroke="#6b6b6b" />
+            <Line endX="550.0" layoutX="105.0" layoutY="345.0" startX="-10.0" stroke="#6b6b6b" />
+            <VBox layoutX="339.0" layoutY="246.0" />
+            <VBox layoutX="111.0" layoutY="146.0" spacing="15.0">
+               <children>
+                  <RadioButton id="radioSum" fx:id="radioSum" layoutX="90.0" layoutY="161.0" mnemonicParsing="false" onAction="#radioSumCheck" selected="true" text="Összegzés" toggleGroup="$op">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="radioMax" fx:id="radioMax" layoutX="90.0" layoutY="192.0" mnemonicParsing="false" onAction="#radioMaxCheck" text="Maximum" toggleGroup="$op">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="radioSec" fx:id="radioSec" layoutX="90.0" layoutY="223.0" mnemonicParsing="false" onAction="#radioSecCheck" text="Metszet" toggleGroup="$op">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="radioOrderUp" fx:id="radioOrderUp" layoutX="90.0" layoutY="258.0" mnemonicParsing="false" onAction="#radioOrderUpCheck" text="Rendez fel" toggleGroup="$op">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <Label id="errorValue" fx:id="errorValue" layoutX="521.0" layoutY="213.0" text="Hibás érték!" textFill="#fc3232" visible="false">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="351.0" layoutY="255.0" prefHeight="25.0" prefWidth="265.0" text="Pozitív egész számok 1...99 - ig" textFill="#6b6b6b">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="errorPane" fx:id="errorPane" disable="true" prefHeight="400.0" prefWidth="660.0" visible="false">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ff9696" height="220.0" layoutX="105.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="450.0">
+               <effect>
+                  <DropShadow height="37.31" offsetX="3.0" offsetY="3.0" radius="17.785" spread="0.02" width="35.83" />
+               </effect>
+            </Rectangle>
+            <Label layoutX="201.0" layoutY="102.0" text="Hibás adatokat adtál meg! " textFill="#6b6b6b">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox layoutX="123.0" layoutY="152.0">
+               <children>
+                  <Label layoutX="189.0" layoutY="152.0" text="Pozitív egész számok 1-től 99-ig" textFill="#6b6b6b">
+                     <font>
+                        <Font name="Consolas Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="193.0" layoutY="170.0" text="Maximális tömb hossz: 16 elem" textFill="#6b6b6b">
+                     <font>
+                        <Font name="Consolas Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="123.0" layoutY="191.0" text="Az elemek vesszővel elválasztva, szóköz nélkül!" textFill="#6b6b6b">
+                     <font>
+                        <Font name="Consolas Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="215.0" layoutY="209.0" text="Az elemek ismétlődhetnek" textFill="#6b6b6b">
+                     <font>
+                        <Font name="Consolas Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Line endX="150.0" layoutX="330.0" layoutY="133.0" startX="-150.0" stroke="#6b6b6b" />
+            <Button id="errorOkButton" fx:id="errorOkButton" layoutX="310.0" layoutY="263.0" mnemonicParsing="false" onAction="#errorButtonAction" text="OK">
+               <font>
+                  <Font name="Consolas" size="16.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Rectangle fill="#1fffa6" height="39.0" stroke="#5d5d5d" strokeType="INSIDE" strokeWidth="0.5" width="680.0" />
+      <Text fill="#6b6b6b" layoutX="101.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tömbműveletek tesztprogram" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="32.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

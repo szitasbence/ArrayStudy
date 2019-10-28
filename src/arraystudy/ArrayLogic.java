@@ -33,15 +33,6 @@ public class ArrayLogic {
        
    }
    
-   //New comment test
-   //testing git: javadoc added
-   
-   /**
-    * 
-    * @param firstArray
-    * @param functionCode 
-    */
-   
    ArrayLogic(int[] firstArray, int functionCode){
        function = functionCode;
         array1 = firstArray;

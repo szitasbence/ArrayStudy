@@ -33,6 +33,8 @@ public class ArrayLogic {
        
    }
    
+   //Teszt komment
+   
    ArrayLogic(int[] firstArray, int functionCode){
        function = functionCode;
         array1 = firstArray;

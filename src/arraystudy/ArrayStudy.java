@@ -16,6 +16,9 @@ import javafx.stage.Stage;
  *
  * @author Bence
  */
+
+//Teszt komment
+//Uj sor
 public class ArrayStudy extends Application {
     
     @Override

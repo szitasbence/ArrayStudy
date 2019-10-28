@@ -20,6 +20,8 @@ import javafx.scene.layout.VBox;
  * 
  */
 
+//Teszt komment
+
 public class Controller implements Initializable {
     private final int MAX_ARRAY_LENGTH = 16;
     private final int MAX_NUMBER = 99;

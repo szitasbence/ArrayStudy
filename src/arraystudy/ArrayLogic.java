@@ -31,8 +31,10 @@ public class ArrayLogic {
     
    ArrayLogic(){
        
-   } 
-
+   }
+   
+   //New comment test
+   
    ArrayLogic(int[] firstArray, int functionCode){
        function = functionCode;
         array1 = firstArray;
